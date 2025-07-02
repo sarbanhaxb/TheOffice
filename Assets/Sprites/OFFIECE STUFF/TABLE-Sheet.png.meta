@@ -1,0 +1,1073 @@
+fileFormatVersion: 2
+guid: 179cbf5c9d26ae34fad318015c505a02
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TABLE-Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3752.889
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8466c3e0d9f83724992142a26972adbd
+      internalID: -1303151330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TABLE-Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 3752.889
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a64779a64baff34bb083d898e047db8
+      internalID: 1022907304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TABLE-Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 1098
+        y: 3752.889
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ba4d337b4fe4194088ed96a8a9b5130
+      internalID: 1302261781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TABLE-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 1647
+        y: 3752.889
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1b016b99cef09344b5176b4e356c24e
+      internalID: -1659607472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TABLE-PASE
+      rect:
+        serializedVersion: 2
+        x: 2196
+        y: 3752.889
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6d0762117f74b7428c96a9b1c71b37d
+      internalID: 1770942446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TABLE-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3283.889
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f5488428f0e9724ba0081ad90ad33b2
+      internalID: -1399332283
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TABLE-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 3283.889
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 378f9adebecbcd54f8b82a54cf8e4f3f
+      internalID: 760204891
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TABLE-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 1098
+        y: 3283.889
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e550c376c9e84644b3185c00b51450d
+      internalID: 354552758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TABLE-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 1647
+        y: 3283.889
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 171b669a34696764fbfad3ee28882856
+      internalID: 286239239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TABLE-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 2196
+        y: 3283.889
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e576d3b0a015e749a8f7e4d64c5f7e5
+      internalID: 996186709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TABLE-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2815
+        width: 549
+        height: 469
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d90f4d21c1a28f4198b079e8d9262e8
+      internalID: 1264864661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TABLE-Sheet_11
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 2814.889
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14c30dfccd85a5941a61030f5ecbd0c5
+      internalID: 1555732009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TABLE-Sheet_12
+      rect:
+        serializedVersion: 2
+        x: 1098
+        y: 2814.889
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12c26349a6f36664db0621b2870bb5f0
+      internalID: -997050602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TABLE-Sheet_13
+      rect:
+        serializedVersion: 2
+        x: 1647
+        y: 2814.889
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d64f4602e2556e459076a83cb1c4bcb
+      internalID: -1638131463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TABLE-Sheet_14
+      rect:
+        serializedVersion: 2
+        x: 2196
+        y: 2814.889
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68d6ad858578d6f47aaef1f95730c49f
+      internalID: 1828812304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TABLE-Sheet_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2345.889
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a7eb55bf6e2f694aa2a04fc91df17d9
+      internalID: 1171312719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TABLE-Sheet_16
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 2345.889
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 779c647f1f142bf42a87522f6125ba06
+      internalID: 1566228038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TABLE-Sheet_17
+      rect:
+        serializedVersion: 2
+        x: 1098
+        y: 2345.889
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04ead1049c5c8934294c125df43d0daf
+      internalID: -1697928844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TABLE-Sheet_18
+      rect:
+        serializedVersion: 2
+        x: 1647
+        y: 2345.889
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f3faafdcc047eb41b842cccee2a5169
+      internalID: -1444703471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TABLE-Sheet_19
+      rect:
+        serializedVersion: 2
+        x: 2196
+        y: 2345.889
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 151473419f008ec4cb3c51c6e691558b
+      internalID: 1133056998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TABLE-Sheet_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1876.8889
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 455d5b9d975d23640a11c03fa43dc687
+      internalID: 960733743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TABLE-Sheet_21
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 1876.8889
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cbecd03dfd4f334c98a226de7d23abe
+      internalID: 2045535194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TABLE-Sheet_22
+      rect:
+        serializedVersion: 2
+        x: 1098
+        y: 1876.8889
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d708963e1d9b9bd4b8f8cd94006e381a
+      internalID: -882972409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TABLE-Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 1647
+        y: 1876.8889
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 192a90eeaacd2244a9fe54fcdcb6c8bf
+      internalID: 2142160016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TABLE-Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 2196
+        y: 1876.8889
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8607e4e655d895d47b6ba1751ea5e137
+      internalID: 1334563863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TABLE-Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1407.8889
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70018d3a8ebd4d249b9c3ca3d142cdb4
+      internalID: -1023165749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TABLE-Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 1407.8889
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5fa4481b96ff5043ba3fb89a23c3dec
+      internalID: 1932181938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TABLE-Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 1098
+        y: 1407.8889
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd689bd5a7ebfaa4b95850cf64ba0cbd
+      internalID: 1964530631
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TABLE-Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 1647
+        y: 1407.8889
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f64ba4b5e7d377f4cb2d5ac6c32a5660
+      internalID: -1289273475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TABLE-Sheet_29
+      rect:
+        serializedVersion: 2
+        x: 2196
+        y: 1407.8889
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df9e116c6550d4c438bdc3234e65f695
+      internalID: 893238052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TABLE-Sheet_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 938.8889
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd013443c8b0fa74d94b354b545dda60
+      internalID: -884997540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TABLE-Sheet_31
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 938.8889
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caa486b42fe6ace4a8804eb1a96d38ee
+      internalID: 1372513494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TABLE-Sheet_32
+      rect:
+        serializedVersion: 2
+        x: 1098
+        y: 938.8889
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d88db3e6c972eb4bb727b316f04e8f1
+      internalID: 1656702298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TABLE-Sheet_33
+      rect:
+        serializedVersion: 2
+        x: 1647
+        y: 938.8889
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 023b7221d4d01f247a6869e6a229731c
+      internalID: -1382295684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TABLE-Sheet_34
+      rect:
+        serializedVersion: 2
+        x: 2196
+        y: 938.8889
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d9d3e225bbc6c44bb96146fb6d4c8fd
+      internalID: -291138695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TABLE-Sheet_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 470
+        width: 549
+        height: 469
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f015c57f7e6bd1e4dbf3fc096c85b289
+      internalID: -875316077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TABLE-Sheet_36
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 469.8889
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faecd0d5017672d43a0746465ad9853d
+      internalID: -1630159935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TABLE-Sheet_37
+      rect:
+        serializedVersion: 2
+        x: 1098
+        y: 469.8889
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e48dc847156b9345be14052af1387fc
+      internalID: 1618565263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TABLE-Sheet_38
+      rect:
+        serializedVersion: 2
+        x: 1647
+        y: 469.8889
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 568f4854d603c9e42ac9a97df8142b25
+      internalID: -1752185751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TABLE-Sheet_39
+      rect:
+        serializedVersion: 2
+        x: 2196
+        y: 469.8889
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a94e603b64b58264d8de1b395a6cd134
+      internalID: 1580510800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TABLE-Sheet_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0.8888855
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77d2e7bf7f92d0d4db990b5f79fb39de
+      internalID: 30158122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TABLE-Sheet_41
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 0.8888855
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 213725df086376547ada70418ff9a20f
+      internalID: -1635418759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TABLE-Sheet_42
+      rect:
+        serializedVersion: 2
+        x: 1098
+        y: 0.8888855
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd94c2d535ecef04faee9b0bf2bbee2e
+      internalID: -1027626036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      TABLE-PASE: 1770942446
+      TABLE-Sheet_0: -1303151330
+      TABLE-Sheet_1: 1022907304
+      TABLE-Sheet_10: 1264864661
+      TABLE-Sheet_11: 1555732009
+      TABLE-Sheet_12: -997050602
+      TABLE-Sheet_13: -1638131463
+      TABLE-Sheet_14: 1828812304
+      TABLE-Sheet_15: 1171312719
+      TABLE-Sheet_16: 1566228038
+      TABLE-Sheet_17: -1697928844
+      TABLE-Sheet_18: -1444703471
+      TABLE-Sheet_19: 1133056998
+      TABLE-Sheet_2: 1302261781
+      TABLE-Sheet_20: 960733743
+      TABLE-Sheet_21: 2045535194
+      TABLE-Sheet_22: -882972409
+      TABLE-Sheet_23: 2142160016
+      TABLE-Sheet_24: 1334563863
+      TABLE-Sheet_25: -1023165749
+      TABLE-Sheet_26: 1932181938
+      TABLE-Sheet_27: 1964530631
+      TABLE-Sheet_28: -1289273475
+      TABLE-Sheet_29: 893238052
+      TABLE-Sheet_3: -1659607472
+      TABLE-Sheet_30: -884997540
+      TABLE-Sheet_31: 1372513494
+      TABLE-Sheet_32: 1656702298
+      TABLE-Sheet_33: -1382295684
+      TABLE-Sheet_34: -291138695
+      TABLE-Sheet_35: -875316077
+      TABLE-Sheet_36: -1630159935
+      TABLE-Sheet_37: 1618565263
+      TABLE-Sheet_38: -1752185751
+      TABLE-Sheet_39: 1580510800
+      TABLE-Sheet_40: 30158122
+      TABLE-Sheet_41: -1635418759
+      TABLE-Sheet_42: -1027626036
+      TABLE-Sheet_5: -1399332283
+      TABLE-Sheet_6: 760204891
+      TABLE-Sheet_7: 354552758
+      TABLE-Sheet_8: 286239239
+      TABLE-Sheet_9: 996186709
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

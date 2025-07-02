@@ -1,0 +1,1077 @@
+fileFormatVersion: 2
+guid: 99c58a8c03eff994b85b019892461ae1
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 16384
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: WORKING CHILL_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3753
+        width: 549
+        height: 469
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 865372814776fa1448fffeeacd4d164a
+      internalID: 941841204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WORKING CHILL_1
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 3752.889
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3c5c687a131f8048babe906e0a00b37
+      internalID: -1071549749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WORKING CHILL_2
+      rect:
+        serializedVersion: 2
+        x: 1098
+        y: 3752.889
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9681861139ea2684cb5a9b6c2aabc561
+      internalID: 1731101736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WORKING CHILL_3
+      rect:
+        serializedVersion: 2
+        x: 1647
+        y: 3752.889
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2fdcd7e3efb72744b61845dd47bfc54
+      internalID: -191588091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WORKING CHILL_4
+      rect:
+        serializedVersion: 2
+        x: 2196
+        y: 3752.889
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a0d4dd5e6d4ef94593b3229b743f430
+      internalID: -1637281029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WORKING CHILL_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 3283.889
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27d1c08ba0d9e54419d58a0910e5d160
+      internalID: -541158500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WORKING CHILL_6
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 3283.889
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 254babcd79411af4d85fbcf98905bf5b
+      internalID: 894498332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WORKING CHILL_7
+      rect:
+        serializedVersion: 2
+        x: 1098
+        y: 3283.889
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1541d90203d4b6a4a93dd34b7e468d27
+      internalID: -44031280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WORKING CHILL_8
+      rect:
+        serializedVersion: 2
+        x: 1647
+        y: 3283.889
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7abcabf76a18d7408a7ced1f8e87570
+      internalID: -1606898757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WORKING CHILL_9
+      rect:
+        serializedVersion: 2
+        x: 2196
+        y: 3284
+        width: 549
+        height: 469
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdb758bbba6ad8148b485994774f839b
+      internalID: 2145038107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WORKING CHILL_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2814.889
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13788c311c5c8c34ab7f7f9bd9ea84f6
+      internalID: 1522745251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WORKING CHILL_11
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 2814.889
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21eac65d46e8c374d846af9d90612099
+      internalID: -1859893514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WORKING CHILL_12
+      rect:
+        serializedVersion: 2
+        x: 1098
+        y: 2814.889
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cba649bd70e980845bf0108d2a5827f4
+      internalID: 890223440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WORKING CHILL_13
+      rect:
+        serializedVersion: 2
+        x: 1647
+        y: 2814.889
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac28d01fa7fec8947acd56c93bc48986
+      internalID: 683681344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WORKING CHILL_14
+      rect:
+        serializedVersion: 2
+        x: 2196
+        y: 2814.889
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 187ed45bda2bf1040b39679ca94afda6
+      internalID: -1231410742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WORKING CHILL_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2345.889
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d837a59dbc6051c43ac12401664739c5
+      internalID: 1133904995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WORKING CHILL_16
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 2345.889
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58041cc4c97effb4bb6b8b8d5caa9742
+      internalID: -1587718433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WORKING CHILL_17
+      rect:
+        serializedVersion: 2
+        x: 1098
+        y: 2345.889
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 158bf4fa069c06c498178c5e20b6ed58
+      internalID: -1283594094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WORKING CHILL_18
+      rect:
+        serializedVersion: 2
+        x: 1647
+        y: 2345.889
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e8e50f95c3207b45bdcb9305b071c12
+      internalID: 1863320322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WORKING CHILL_19
+      rect:
+        serializedVersion: 2
+        x: 2196
+        y: 2346
+        width: 549
+        height: 469
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f08a9f784479764a95470815356f1ee
+      internalID: 151035328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WORKING CHILL_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1876.8889
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c83320aa7d059f4fb24872320683e26
+      internalID: 1798383974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WORKING CHILL_21
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 1876.8889
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 553138a749483b04cb1838d37fc4646a
+      internalID: -23037458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WORKING CHILL_22
+      rect:
+        serializedVersion: 2
+        x: 1098
+        y: 1876.8889
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42231c23adf5376459d4b63b4663ad1c
+      internalID: -1133993437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WORKING CHILL_23
+      rect:
+        serializedVersion: 2
+        x: 1647
+        y: 1876.8889
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 939f3621ac9959f479a6d3d3a63369e4
+      internalID: 1426463758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WORKING CHILL_24
+      rect:
+        serializedVersion: 2
+        x: 2196
+        y: 1876.8889
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72f1c254020e1234d9661771b970e8ab
+      internalID: -1857003519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WORKING CHILL_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1407.8889
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e022fc9631bc9f74c8d08e58b477b4ea
+      internalID: 1111144514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WORKING CHILL_26
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 1407.8889
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 193005365b46e81409419c71eda63c31
+      internalID: 2011279398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WORKING CHILL_27
+      rect:
+        serializedVersion: 2
+        x: 1098
+        y: 1407.8889
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b802b994a769d04fbe8641be1b172f2
+      internalID: 795278486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WORKING CHILL_28
+      rect:
+        serializedVersion: 2
+        x: 1647
+        y: 1408
+        width: 549
+        height: 469
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3aa4bf850d3ea2d409857c590216e7f6
+      internalID: 2109206111
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WORKING CHILL_29
+      rect:
+        serializedVersion: 2
+        x: 2196
+        y: 1407.8889
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b17a883b3a6114947adf7218e99d2eb9
+      internalID: -898961679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WORKING CHILL_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 938.8889
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68ae01435de104c48ba410e00ce7bccf
+      internalID: -503458949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WORKING CHILL_31
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 938.8889
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f368ff6a3e9b5444a61c047a5b88ef8
+      internalID: -619605921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WORKING CHILL_32
+      rect:
+        serializedVersion: 2
+        x: 1098
+        y: 938.8889
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d76c865e4eb9c3449e9b16b4aba35ed
+      internalID: 1697666491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WORKING CHILL_33
+      rect:
+        serializedVersion: 2
+        x: 1647
+        y: 938.8889
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a3e6f2886a5edf4bbe5bfb0c8c74d16
+      internalID: 1950415354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WORKING CHILL_34
+      rect:
+        serializedVersion: 2
+        x: 2196
+        y: 938.8889
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da07e6c46f7f15c4e8a1591be56ef95b
+      internalID: 71223367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WORKING CHILL_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 469.8889
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d883bb908e8ca8a448f4249ce9c8e24f
+      internalID: -783189333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WORKING CHILL_36
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 469.8889
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ed7f9d9cd267da4aa374e52aa8d52b6
+      internalID: 671571888
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WORKING CHILL_37
+      rect:
+        serializedVersion: 2
+        x: 1098
+        y: 469.8889
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f61bf459aeaf3c48aace90ace9f1037
+      internalID: 318448518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WORKING CHILL_38
+      rect:
+        serializedVersion: 2
+        x: 1647
+        y: 469.8889
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c6f74ede1013ad49a1bb9738ee4db1b
+      internalID: -1767108797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WORKING CHILL_39
+      rect:
+        serializedVersion: 2
+        x: 2196
+        y: 469.8889
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e87edc8be4162794280c1007752bda4e
+      internalID: 1506194565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WORKING CHILL_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0.8888855
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 285f3a8e8ceaf754b8cf1c438202a76a
+      internalID: -35795835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WORKING CHILL_45
+      rect:
+        serializedVersion: 2
+        x: 1647
+        y: 1407.8889
+        width: 549.2
+        height: 469.1111
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d3e4ad3bfba7794d9e329c4118ae9ca
+      internalID: -1914214895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: WORKING CHILL_46
+      rect:
+        serializedVersion: 2
+        x: 1647
+        y: 1407.8889
+        width: 549.2
+        height: 469.1111
+      alignment: 9
+      pivot: {x: 0.5, y: 0.3}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48456906d54236648be1b62a6434579e
+      internalID: 718054863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      WORKING CHILL_0: 941841204
+      WORKING CHILL_1: -1071549749
+      WORKING CHILL_10: 1522745251
+      WORKING CHILL_11: -1859893514
+      WORKING CHILL_12: 890223440
+      WORKING CHILL_13: 683681344
+      WORKING CHILL_14: -1231410742
+      WORKING CHILL_15: 1133904995
+      WORKING CHILL_16: -1587718433
+      WORKING CHILL_17: -1283594094
+      WORKING CHILL_18: 1863320322
+      WORKING CHILL_19: 151035328
+      WORKING CHILL_2: 1731101736
+      WORKING CHILL_20: 1798383974
+      WORKING CHILL_21: -23037458
+      WORKING CHILL_22: -1133993437
+      WORKING CHILL_23: 1426463758
+      WORKING CHILL_24: -1857003519
+      WORKING CHILL_25: 1111144514
+      WORKING CHILL_26: 2011279398
+      WORKING CHILL_27: 795278486
+      WORKING CHILL_28: 2109206111
+      WORKING CHILL_29: -898961679
+      WORKING CHILL_3: -191588091
+      WORKING CHILL_30: -503458949
+      WORKING CHILL_31: -619605921
+      WORKING CHILL_32: 1697666491
+      WORKING CHILL_33: 1950415354
+      WORKING CHILL_34: 71223367
+      WORKING CHILL_35: -783189333
+      WORKING CHILL_36: 671571888
+      WORKING CHILL_37: 318448518
+      WORKING CHILL_38: -1767108797
+      WORKING CHILL_39: 1506194565
+      WORKING CHILL_4: -1637281029
+      WORKING CHILL_40: -35795835
+      WORKING CHILL_41: 1892001056
+      WORKING CHILL_42: 27968932
+      WORKING CHILL_43: -1800538881
+      WORKING CHILL_44: -2138144401
+      WORKING CHILL_45: -1914214895
+      WORKING CHILL_46: 718054863
+      WORKING CHILL_5: -541158500
+      WORKING CHILL_6: 894498332
+      WORKING CHILL_7: -44031280
+      WORKING CHILL_8: -1606898757
+      WORKING CHILL_9: 2145038107
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

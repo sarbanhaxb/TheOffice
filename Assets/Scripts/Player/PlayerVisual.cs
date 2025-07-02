@@ -36,7 +36,8 @@ public class PlayerVisual : MonoBehaviour
                 {
                     spriteRenderer.flipX = true;
                 }
-
+                Debug.Log($"GetMousePosition: {GameInput.Instance.GetMousePosition().x}");
+                Debug.Log($"GetPlayerScreenPosition: {PlayerMovement.Instance.GetPlayerScreenPosition().x}");
                 if (GameInput.Instance.GetMousePosition().y < PlayerMovement.Instance.GetPlayerScreenPosition().y)
                 {
                     animator.SetFloat("MoveY", -1);
@@ -70,6 +71,23 @@ public class PlayerVisual : MonoBehaviour
 
                 break;
             case PlayerStates.Walking:
+                if (GameInput.Instance.GetMousePosition().x < PlayerMovement.Instance.GetPlayerScreenPosition().x)
+                {
+                    spriteRenderer.flipX = false;
+                }
+                else
+                {
+                    spriteRenderer.flipX = true;
+                }
+
+                if (GameInput.Instance.GetMousePosition().y < PlayerMovement.Instance.GetPlayerScreenPosition().y)
+                {
+                    animator.SetFloat("MoveY", -1);
+                }
+                else
+                {
+                    animator.SetFloat("MoveY", 1);
+                }
                 break;
         }
     }
