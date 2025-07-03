@@ -36,8 +36,6 @@ public class PlayerVisual : MonoBehaviour
                 {
                     spriteRenderer.flipX = true;
                 }
-                Debug.Log($"GetMousePosition: {GameInput.Instance.GetMousePosition().x}");
-                Debug.Log($"GetPlayerScreenPosition: {PlayerMovement.Instance.GetPlayerScreenPosition().x}");
                 if (GameInput.Instance.GetMousePosition().y < PlayerMovement.Instance.GetPlayerScreenPosition().y)
                 {
                     animator.SetFloat("MoveY", -1);
