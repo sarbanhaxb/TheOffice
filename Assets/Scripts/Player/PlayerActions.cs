@@ -1,40 +1,25 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerActions : MonoBehaviour
 {
-    private bool isSmoking;
-    private bool isSpeaking;
-    private bool isShowing;
-
     public static PlayerActions Instance;
 
     private void Awake()
     {
         Instance = this;
-        isSmoking = false;
-        isSpeaking = false;
-        isShowing = false;
     }
 
-    private void Smoking()
+    private void Start()
     {
-        isSmoking = true;
+        //GameInput.Instance.OnPlayerAction += OnAction;
     }
 
-    private void Speaking()
+    private void OnAction(object sender, System.EventArgs e)
     {
-        isSpeaking = true;
+        
     }
-
-    private void Showing()
-    {
-        isShowing = true;
-    }
-
-    public bool IsSmoking() => isSmoking;
-    public bool IsSpeaking() => isSpeaking;
-    public bool IsShowing() => isShowing;
-
 }

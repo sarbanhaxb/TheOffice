@@ -2,7 +2,57 @@ fileFormatVersion: 2
 guid: 1437e47db06977a4f99efd2e890bd43f
 ScriptedImporter:
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: IDLE_BACK
+    second: {fileID: 7400000, guid: cb0ed181fe2b6db44a3ad53056626f8b, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: IDLE_FRONT
+    second: {fileID: 7400000, guid: 20fe06e35d2704e4d915007fafa83249, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: PHONE_CALL
+    second: {fileID: 7400000, guid: c8323ca9d76bbe34f81ace3dcb1411e9, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: SHOW_GRAF
+    second: {fileID: 7400000, guid: 9ff469afa9706d941a918e5f72415b17, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: SMOKE_BACK
+    second: {fileID: 7400000, guid: 1f2334c1ec8b9cd49b5d5a897dfba1d4, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: SMOKE_FRONT
+    second: {fileID: 7400000, guid: 02bb10bb6a87fa6428415bfc19369508, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: SPEAK_BACK
+    second: {fileID: 7400000, guid: c765bbadf87dc0b44bc2e7d28000f186, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: SPEAK_FRONT
+    second: {fileID: 7400000, guid: 611be5dff2d0da14199bf10624ea94c1, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: WALK_BACK
+    second: {fileID: 7400000, guid: 057087d1d42c04244a3e677b1f133cd5, type: 2}
+  - first:
+      type: UnityEngine:AnimationClip
+      assembly: UnityEngine.AnimationModule
+      name: WALK_FRONT
+    second: {fileID: 7400000, guid: dc29d4347c8560a4d93f34c6e62170ca, type: 2}
   serializedVersion: 2
   userData: 
   assetBundleName: 
@@ -98,7 +148,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 638871613479325632
+  platformSettingsDirtyTick: 638872200464432492
   textureAssetName: 
   singleSpriteImportData:
   - name: 

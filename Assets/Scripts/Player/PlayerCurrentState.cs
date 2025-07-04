@@ -5,39 +5,22 @@ using UnityEngine;
 public class PlayerCurrentState : MonoBehaviour
 {
     [SerializeField] PlayerStates currentState;
-    public static PlayerCurrentState Instanse { get; private set; }
+    public static PlayerCurrentState Instance { get; private set; }
 
     private void Awake()
     {
         currentState = PlayerStates.Idle;
-        Instanse = this;
+        Instance = this;
     }
 
     private void FixedUpdate()
     {
-        CheckCurrentState();
+
     }
 
-
-    private void CheckCurrentState()
+    public void SetState(PlayerStates state)
     {
-        if (PlayerMovement.Instance.IsWalking())
-        {
-            currentState = PlayerStates.Walking;
-        }
-        else if (PlayerActions.Instance.IsSmoking())
-        {
-            currentState = PlayerStates.Smoking;
-        }
-        else if (PlayerActions.Instance.IsSpeaking())
-        {
-            currentState = PlayerStates.Speaking;
-        }
-        else
-        {
-            currentState = PlayerStates.Idle;
-        }
+        currentState = state;
     }
-
     public PlayerStates GetCurrentState() => currentState;
 }

@@ -11,19 +11,23 @@ public class PlayerMovement : MonoBehaviour
 
     private Rigidbody2D rb;
     public GameInput GameInput { get; private set; }
-    private bool isWalking;
 
     private void Awake()
     {
         Instance = this;
         GameInput = gameObject.AddComponent<GameInput>();
         rb = GetComponent<Rigidbody2D>();
-        isWalking = false;
     }
 
     private void FixedUpdate()
     {
-        HandleMovement();
+        PlayerStates ps = PlayerCurrentState.Instance.GetCurrentState();
+        List<PlayerStates> psl = new() { PlayerStates.Present, PlayerStates.Working, PlayerStates.Smoking, PlayerStates.DrinkingWater };
+        if (!psl.Contains(ps))
+        {
+            HandleMovement();
+        }
+        Debug.Log(PlayerCurrentState.Instance.GetCurrentState());
     }
 
     private void HandleMovement()
@@ -32,14 +36,12 @@ public class PlayerMovement : MonoBehaviour
         rb.MovePosition(rb.position + inputVector * (moveSpeed * Time.fixedDeltaTime));
         if (Mathf.Abs(inputVector.x) > 0 || Mathf.Abs(inputVector.y) > 0)
         {
-            isWalking = true;
+            PlayerCurrentState.Instance.SetState(PlayerStates.Walking);
         }
         else
         {
-            isWalking = false;
+            PlayerCurrentState.Instance.SetState(PlayerStates.Idle);
         }
     }
-
-    public bool IsWalking() => isWalking;
     public Vector3 GetPlayerScreenPosition() => Camera.main.WorldToScreenPoint(transform.position);
 }

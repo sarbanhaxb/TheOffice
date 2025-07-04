@@ -7,6 +7,8 @@ public enum PlayerStates
     Idle,
     Walking,
     Smoking,
-    Speaking,
-    Showing
+    Talking,
+    Present,
+    Working,
+    DrinkingWater
 }
