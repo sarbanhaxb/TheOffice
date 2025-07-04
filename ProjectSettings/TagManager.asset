@@ -11,6 +11,7 @@ TagManager:
   - KitchenRoom
   - Toilet
   - Border
+  - Personal
   layers:
   - Default
   - TransparentFX
@@ -18,7 +19,7 @@ TagManager:
   - Interactable
   - Water
   - UI
-  - 
+  - NavMeshObstacle
   - 
   - 
   - 

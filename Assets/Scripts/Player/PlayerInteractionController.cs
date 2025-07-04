@@ -25,9 +25,6 @@ public class PlayerInteractionController : MonoBehaviour
             _currentInteractable.Interact();
         }
     }
-
-
-
     private void FindInteractable()
     {
         Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, interactionRange, interactableLayer);

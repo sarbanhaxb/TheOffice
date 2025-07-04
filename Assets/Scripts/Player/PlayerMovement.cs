@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TheOffice.Utils;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -22,7 +23,7 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
         PlayerStates ps = PlayerCurrentState.Instance.GetCurrentState();
-        List<PlayerStates> psl = new() { PlayerStates.Present, PlayerStates.Working, PlayerStates.Smoking, PlayerStates.DrinkingWater };
+        List<PlayerStates> psl = new() { PlayerStates.Present, PlayerStates.Working, PlayerStates.Smoking, PlayerStates.DrinkingWater, PlayerStates.DrinkingCoffee, PlayerStates.Microwaving };
         if (!psl.Contains(ps))
         {
             HandleMovement();

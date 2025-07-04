@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TheOffice.Utils;
 using UnityEngine;
 
 public class PlayerVisual : MonoBehaviour
@@ -11,6 +12,8 @@ public class PlayerVisual : MonoBehaviour
     private const string IS_PRESENT = "IsPresent";
     private const string IS_WORKING = "IsWorking";
     private const string IS_DRINKING = "IsDrinking";
+    private const string IS_DRINKING_COFFEE = "IsDrinkingCoffee";
+    private const string IS_MICROWAVING = "IsMicrowaving";
 
 
     private void Awake()
@@ -50,12 +53,20 @@ public class PlayerVisual : MonoBehaviour
                 animator.SetBool(IS_DRINKING, true);
                 GetComponent<SpriteRenderer>().flipX = false;
                 break;
+            case PlayerStates.DrinkingCoffee:
+                animator.SetTrigger(IS_DRINKING_COFFEE);
+                break;
+            case PlayerStates.Microwaving:
+                animator.SetTrigger(IS_MICROWAVING);
+                break;
             case PlayerStates.Idle:
                 animator.SetBool(IS_WALKING, false);
                 animator.SetBool(IS_SMOKING, false);
                 animator.SetBool(IS_PRESENT, false);
                 animator.SetBool(IS_WORKING, false);
                 animator.SetBool(IS_DRINKING, false);
+                animator.SetBool(IS_DRINKING_COFFEE, false);
+                animator.SetBool(IS_MICROWAVING, false);
                 break;
         }
     }
