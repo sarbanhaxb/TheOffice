@@ -8,13 +8,19 @@ public class WorkingInteractable : MonoBehaviour, IInteractable
 {
     [Header("—сылки")]
     public GameObject workPlaceHint;
+    [SerializeField] private float interactionPriority = 5f;
+
 
     public void Interact()
     {
-        if (PlayerCurrentState.Instance.GetCurrentState() != PlayerStates.Working)
+        if (PlayerCurrentState.Instance.GetCurrentState() != PlayerStates.Working && PlayerStats.Instance._currentStressLevel != PlayerStats.Instance.maxStressLevel)
         {
             PlayerCurrentState.Instance.SetState(PlayerStates.Working);
             workPlaceHint.GetComponent<Text>().text = "Press E to stop working";
+        }
+        else if (PlayerCurrentState.Instance.GetCurrentState() != PlayerStates.Working && PlayerStats.Instance._currentStressLevel == PlayerStats.Instance.maxStressLevel)
+        {
+            PlayerCurrentState.Instance.SetState(PlayerStates.Tired);
         }
         else
         {
@@ -31,4 +37,6 @@ public class WorkingInteractable : MonoBehaviour, IInteractable
     {
         workPlaceHint.SetActive(false);
     }
+
+    public float GetPriority() => interactionPriority;
 }

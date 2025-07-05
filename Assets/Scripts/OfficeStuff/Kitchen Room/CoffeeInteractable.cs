@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TheOffice.Utils;
@@ -7,8 +8,18 @@ public class CoffeeInteractable : MonoBehaviour, IInteractable
 {
     [Header("—сылки")]
     public GameObject coffeeZone;
+    public GameObject coffeePrefab;
+    public Vector3 coffeeSpawnPoint = new(70.65f, -11.52f, 0f);
+
+    [Header("—сылки")]
+    public float animationDuration = 5.8f;
+
+    [SerializeField] private float interactionPriority = 5f;
+
+
     private Animator animator;
     private const string IS_COFFEE = "IsCoffee";
+    private GameObject _currentCoffee;
 
     private void Awake()
     {
@@ -17,14 +28,21 @@ public class CoffeeInteractable : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        if (PlayerCurrentState.Instance.GetCurrentState() != PlayerStates.DrinkingCoffee)
+        if (PlayerCurrentState.Instance.GetCurrentState() != PlayerStates.DrinkingCoffee && _currentCoffee == null)
         {
-            PlayerCurrentState.Instance.SetState(PlayerStates.DrinkingCoffee);
-            animator.SetTrigger(IS_COFFEE);
+            StartCoroutine(MakeCoffeeRoutine());
         }
-        else
+    }
+
+    private IEnumerator MakeCoffeeRoutine()
+    {
+        animator.SetTrigger(IS_COFFEE);
+
+        yield return new WaitForSeconds(animationDuration);
+
+        if (_currentCoffee == null)
         {
-            PlayerCurrentState.Instance.SetState(PlayerStates.Idle);
+            _currentCoffee = Instantiate(coffeePrefab, coffeeSpawnPoint, Quaternion.identity);
         }
     }
 
@@ -36,4 +54,7 @@ public class CoffeeInteractable : MonoBehaviour, IInteractable
     {
         coffeeZone.SetActive(false);
     }
+
+    public float GetPriority() => interactionPriority;
+
 }

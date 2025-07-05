@@ -9,6 +9,9 @@ public class SmokingInteractable : MonoBehaviour, IInteractable
     [Header("—сылки")]
     public GameObject smokeHint;
 
+    [SerializeField] private float interactionPriority = 5f;
+
+
     public void Interact()
     {
         if (PlayerCurrentState.Instance.GetCurrentState() != PlayerStates.Smoking)
@@ -31,4 +34,7 @@ public class SmokingInteractable : MonoBehaviour, IInteractable
     {
         smokeHint.SetActive(false);
     }
+
+    public float GetPriority() => interactionPriority;
+
 }

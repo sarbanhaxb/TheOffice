@@ -156,11 +156,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxStressLevel: 100
-  currentStressLevel: 0
+  stressDecreaseRate: 0.5
   maxStarveLevel: 100
-  currentStarveLevel: 0
+  hungerIncreaseRate: 0.3
   maxThirstLevel: 100
-  currentThirstLevel: 0
+  thirstIncreaseRate: 0.4
   workingSpeed: 0
 --- !u!1 &1319343551986956748
 GameObject:

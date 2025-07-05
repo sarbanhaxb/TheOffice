@@ -32,6 +32,8 @@ public class NPC_Visual : MonoBehaviour
 
     private void Update()
     {
+        stressBar.transform.localScale = Vector3.one;
+
         stressBar.fillAmount = stats.GetCurrentStressLevel() / stats.GetMaxStressLevel();
         starveBar.fillAmount = stats.GetCurrentStarveLevel() / stats.GetMaxStarveLevel();
         thirstBar.fillAmount = stats.GetCurrentThirstLevel() / stats.GetMaxThirstLevel();

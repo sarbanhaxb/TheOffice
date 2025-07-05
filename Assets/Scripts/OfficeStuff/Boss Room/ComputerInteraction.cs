@@ -10,6 +10,8 @@ public class ComputerInteraction : MonoBehaviour, IInteractable
     public Transform playerSeatPosition;
     public InputActionReference toggleAction;
 
+    [SerializeField] private float interactionPriority = 5f;
+
     [Header("—сылки")]
     public Animator playerAnimator;
     private PlayerInteractionController _controls;
@@ -47,4 +49,6 @@ public class ComputerInteraction : MonoBehaviour, IInteractable
     {
         throw new System.NotImplementedException();
     }
+
+    public float GetPriority() => interactionPriority;
 }

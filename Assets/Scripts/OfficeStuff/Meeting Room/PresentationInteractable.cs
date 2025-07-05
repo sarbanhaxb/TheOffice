@@ -9,6 +9,9 @@ public class PresentationInteractable : MonoBehaviour, IInteractable
     [Header("—сылки")]
     public GameObject presentHint;
 
+    [SerializeField] private float interactionPriority = 5f;
+
+
     public void Interact()
     {
         if (PlayerCurrentState.Instance.GetCurrentState() != PlayerStates.Present)
@@ -31,4 +34,6 @@ public class PresentationInteractable : MonoBehaviour, IInteractable
     {
         presentHint.SetActive(false);
     }
+
+    public float GetPriority() => interactionPriority;
 }

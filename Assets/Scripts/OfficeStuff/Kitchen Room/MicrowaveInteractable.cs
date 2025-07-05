@@ -6,9 +6,19 @@ using UnityEngine;
 public class MicrowaveInteractable : MonoBehaviour, IInteractable
 {
     [Header("—сылки")]
-    public GameObject microwafeZone;
+    public GameObject heatingZone;
+    public GameObject foodPrefab;
+    public Vector3 foodSpawnPoint = new(73.92f, -11.85f, 0f);
+
+    [Header("—сылки")]
+    public float animationDuration = 16.5f;
+
+    [SerializeField] private float interactionPriority = 5f;
+
+
     private Animator animator;
     private const string IS_MICROWAVING = "IsMicrowaving";
+    private GameObject _currentFood;
 
     private void Awake()
     {
@@ -17,23 +27,32 @@ public class MicrowaveInteractable : MonoBehaviour, IInteractable
 
     public void Interact()
     {
-        if (PlayerCurrentState.Instance.GetCurrentState() != PlayerStates.Microwaving)
+        if (PlayerCurrentState.Instance.GetCurrentState() != PlayerStates.Microwaving && _currentFood == null)
         {
-            PlayerCurrentState.Instance.SetState(PlayerStates.Microwaving);
-            animator.SetTrigger(IS_MICROWAVING);
+            StartCoroutine(MakeFoodRoutine());
         }
-        else
+    }
+
+    private IEnumerator MakeFoodRoutine()
+    {
+        animator.SetTrigger(IS_MICROWAVING);
+
+        yield return new WaitForSeconds(animationDuration);
+
+        if (_currentFood == null)
         {
-            PlayerCurrentState.Instance.SetState(PlayerStates.Idle);
+            _currentFood = Instantiate(foodPrefab, foodSpawnPoint, Quaternion.identity);
         }
     }
 
     public void ShowHint()
     {
-        microwafeZone.SetActive(true);
+        heatingZone.SetActive(true);
     }
     public void HideHint()
     {
-        microwafeZone.SetActive(false);
+        heatingZone.SetActive(false);
     }
+
+    public float GetPriority() => interactionPriority;
 }

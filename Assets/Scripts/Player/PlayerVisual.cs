@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TheOffice.Utils;
+using TMPro;
 using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,7 +14,8 @@ public class PlayerVisual : MonoBehaviour
     [SerializeField] private Image starveBar;
     [SerializeField] private Image thirstBar;
 
-
+    [Header("Финансы")]
+    [SerializeField] private TMP_Text Money;
 
     private Animator _animator;
     private SpriteRenderer _spriteRenderer;
@@ -26,6 +28,8 @@ public class PlayerVisual : MonoBehaviour
     private const string IS_DRINKING = "IsDrinking";
     private const string IS_DRINKING_COFFEE = "IsDrinkingCoffee";
     private const string IS_MICROWAVING = "IsMicrowaving";
+    private const string IS_TIRED = "IsTired";
+    private const string IS_EATING = "IsEating";
 
     private static readonly Vector3 PRESENT_POSITION = new(40.5f, 2.5f, 0);
     private static readonly Vector3 WORKING_POSITION = new(9.3f, -1.7f, 0);
@@ -42,8 +46,13 @@ public class PlayerVisual : MonoBehaviour
         UpdateStatsScale();
         UpdatePlayerDirection();
         UpdatePlayerState();
+        UpdateFinanceState();
     }
 
+    private void UpdateFinanceState()
+    {
+        Money.text = Math.Round(PlayerStats.Instance.currentMoney, 2).ToString();
+    }
     private void UpdateStatsScale()
     {
         stressBar.fillAmount = PlayerStats.Instance._currentStressLevel / PlayerStats.Instance.maxStressLevel;
@@ -82,8 +91,11 @@ public class PlayerVisual : MonoBehaviour
             case PlayerStates.DrinkingCoffee:
                 _animator.SetTrigger(IS_DRINKING_COFFEE);
                 break;
-            case PlayerStates.Microwaving:
-                _animator.SetTrigger(IS_MICROWAVING);
+            case PlayerStates.Tired:
+                _animator.SetBool(IS_TIRED, true);
+                break;
+            case PlayerStates.Eating:
+                _animator.SetBool(IS_EATING, true);
                 break;
         }
     }
@@ -97,6 +109,8 @@ public class PlayerVisual : MonoBehaviour
         _animator.SetBool(IS_DRINKING, false);
         _animator.SetBool(IS_DRINKING_COFFEE, false);
         _animator.SetBool(IS_MICROWAVING, false);
+        _animator.SetBool(IS_TIRED, false);
+        _animator.SetBool(IS_EATING, false);
     }
 
     private void UpdatePlayerDirection()
@@ -123,5 +137,6 @@ public class PlayerVisual : MonoBehaviour
         }
     }
 
+    public void SetRandom(int count) => _animator.SetFloat("Random", UnityEngine.Random.Range(0, count));
     public void ResetState() => PlayerCurrentState.Instance.SetState(PlayerStates.Idle);
 }

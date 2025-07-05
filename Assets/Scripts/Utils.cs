@@ -7,9 +7,8 @@ namespace TheOffice.Utils
     public static class Utils
     {
         public static Vector3 GetRandomDir() => new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f)).normalized;
-
     }
-    public enum StatesAI
+    public enum StatesNPC
     {
         Idle,
         Walking
@@ -25,13 +24,14 @@ namespace TheOffice.Utils
         Working,
         DrinkingWater,
         DrinkingCoffee,
-        Microwaving
+        Microwaving,
+        Tired,
+        Eating
     }
-
-
 }
 public interface IInteractable
 {
+    float GetPriority();
     void Interact();
     void ShowHint();
     void HideHint();

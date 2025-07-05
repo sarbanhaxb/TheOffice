@@ -11,6 +11,9 @@ public class CoolerInteractable : MonoBehaviour, IInteractable
     private Animator animator;
     private const string IS_POURING = "IsPouring";
 
+
+    [SerializeField] private float interactionPriority = 5f;
+
     private void Awake()
     {
         animator = GetComponentInParent<Animator>();
@@ -22,10 +25,12 @@ public class CoolerInteractable : MonoBehaviour, IInteractable
         {
             PlayerCurrentState.Instance.SetState(PlayerStates.DrinkingWater);
             animator.SetTrigger(IS_POURING);
+            coolerZone.GetComponent<Text>().text = "Press E to stop";
         }
         else
         {
             PlayerCurrentState.Instance.SetState(PlayerStates.Idle);
+            coolerZone.GetComponent<Text>().text = "Press E to drink water";
         }
     }
 
@@ -37,4 +42,6 @@ public class CoolerInteractable : MonoBehaviour, IInteractable
     {
         coolerZone.SetActive(false);
     }
+
+    public float GetPriority() => interactionPriority;
 }

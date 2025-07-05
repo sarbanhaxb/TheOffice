@@ -8,7 +8,7 @@ using TheOffice.Utils;
 public class NPC_AI : MonoBehaviour
 {
     [Header("Настройки движения")]
-    [SerializeField] private StatesAI startingState;
+    [SerializeField] private StatesNPC startingState;
     [SerializeField] private float roamingDistanceMax = 7f;
     [SerializeField] private float roamingDistanceMin = 3f;
     [SerializeField] private float roamingTimerMax = 2f;
@@ -19,7 +19,7 @@ public class NPC_AI : MonoBehaviour
     [SerializeField] GameObject smokeArea;
 
     private NavMeshAgent navMeshAgent;
-    private StatesAI currentState;
+    private StatesNPC currentState;
     private float roamingTimer;
     private Vector3 roamingPosition;
     private Vector3 startingPosition;
@@ -37,9 +37,9 @@ public class NPC_AI : MonoBehaviour
         switch (currentState)
         {
             default:
-            case StatesAI.Idle:
+            case StatesNPC.Idle:
                 break;
-            case StatesAI.Walking:
+            case StatesNPC.Walking:
                 roamingTimer -= Time.deltaTime;
                 if(roamingTimer < 0)
                 {
@@ -48,7 +48,6 @@ public class NPC_AI : MonoBehaviour
                 }
                 break;
         }
-        Debug.Log(smokeArea.transform.position);
     }
 
     private void Roaming()

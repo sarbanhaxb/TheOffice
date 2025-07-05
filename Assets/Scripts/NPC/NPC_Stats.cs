@@ -19,7 +19,7 @@ public class NPC_Stats : MonoBehaviour
 
     private void Awake()
     {
-        _currentStressLevel = maxStressLevel;
+        _currentStressLevel = 0f;
         _currentStarveLevel = 0f; // Начинаем с пустого уровня
         _currentThirstLevel = 0f;
     }
@@ -36,7 +36,7 @@ public class NPC_Stats : MonoBehaviour
     {
         _currentStressLevel = Mathf.MoveTowards(
             _currentStressLevel,
-            0f,
+            maxStressLevel,
             stressDecreaseRate * Time.deltaTime
         );
     }
@@ -62,7 +62,7 @@ public class NPC_Stats : MonoBehaviour
     // Методы для восстановления показателей
     public void ReduceStress(float amount)
     {
-        _currentStressLevel = Mathf.Clamp(_currentStressLevel + amount, 0f, maxStressLevel);
+        _currentStressLevel = Mathf.Clamp(_currentStressLevel - amount, 0f, maxStressLevel);
     }
 
     public void Eat(float amount)

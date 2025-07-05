@@ -13,15 +13,6 @@ public class PlayerCurrentState : MonoBehaviour
         currentState = PlayerStates.Idle;
         Instance = this;
     }
-
-    private void FixedUpdate()
-    {
-
-    }
-
-    public void SetState(PlayerStates state)
-    {
-        currentState = state;
-    }
+    public void SetState(PlayerStates state) => currentState = state;
     public PlayerStates GetCurrentState() => currentState;
 }

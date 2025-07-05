@@ -10,7 +10,6 @@ public class PlayerMovement : MonoBehaviour
     public GameInput GameInput { get; private set; }
 
     [Header("Настройки движения")]
-    [SerializeField] private float moveSpeed = 10f;
     [SerializeField] private float acceleration = 15f; // Ускорение при разгоне
     [SerializeField] private float deceleration = 20f; // Замедление при остановке
 
@@ -23,7 +22,9 @@ public class PlayerMovement : MonoBehaviour
         PlayerStates.Smoking,
         PlayerStates.DrinkingWater,
         PlayerStates.DrinkingCoffee,
-        PlayerStates.Microwaving
+        PlayerStates.Microwaving,
+        PlayerStates.Tired,
+        PlayerStates.Eating
     };
 
     private void Awake()
@@ -47,7 +48,7 @@ public class PlayerMovement : MonoBehaviour
         bool isMoving = inputVector.magnitude > 0.1f;
 
         // Расчет целевой скорости
-        Vector2 targetVelocity = inputVector.normalized * moveSpeed;
+        Vector2 targetVelocity = inputVector.normalized * PlayerStats.Instance._currentMoveSpeed;
 
         // Плавное изменение скорости
         _currentVelocity = Vector2.Lerp(
