@@ -1,12 +1,24 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TheOffice.Utils;
+using Unity.VisualScripting.Antlr3.Runtime.Misc;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerVisual : MonoBehaviour
 {
-    private Animator animator;
-    private SpriteRenderer spriteRenderer;
+    [Header("Шкалы")]
+    [SerializeField] private Image stressBar;
+    [SerializeField] private Image starveBar;
+    [SerializeField] private Image thirstBar;
+
+
+
+    private Animator _animator;
+    private SpriteRenderer _spriteRenderer;
+    private Rigidbody2D _rb;
+
     private const string IS_WALKING = "IsWalking";
     private const string IS_SMOKING = "IsSmoking";
     private const string IS_PRESENT = "IsPresent";
@@ -15,127 +27,101 @@ public class PlayerVisual : MonoBehaviour
     private const string IS_DRINKING_COFFEE = "IsDrinkingCoffee";
     private const string IS_MICROWAVING = "IsMicrowaving";
 
+    private static readonly Vector3 PRESENT_POSITION = new(40.5f, 2.5f, 0);
+    private static readonly Vector3 WORKING_POSITION = new(9.3f, -1.7f, 0);
 
     private void Awake()
     {
-        animator = GetComponent<Animator>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
+        _animator = GetComponent<Animator>();
+        _spriteRenderer = GetComponent<SpriteRenderer>();
+        _rb = GetComponentInParent<Rigidbody2D>();
     }
 
     private void FixedUpdate()
     {
-        GetAdjustPlayerDirection();
-        CheckState();
+        UpdateStatsScale();
+        UpdatePlayerDirection();
+        UpdatePlayerState();
     }
 
-    private void CheckState()
+    private void UpdateStatsScale()
     {
-        switch (PlayerCurrentState.Instance.GetCurrentState())
+        stressBar.fillAmount = PlayerStats.Instance._currentStressLevel / PlayerStats.Instance.maxStressLevel;
+        starveBar.fillAmount = PlayerStats.Instance._currentStarveLevel / PlayerStats.Instance.maxStarveLevel;
+        thirstBar.fillAmount = PlayerStats.Instance._currentThirstLevel/ PlayerStats.Instance.maxThirstLevel;
+    }
+
+    private void UpdatePlayerState()
+    {
+        var currentState = PlayerCurrentState.Instance.GetCurrentState();
+        ResetAllBoolParameters();
+
+        switch (currentState)
         {
             case PlayerStates.Walking:
-                animator.SetBool(IS_WALKING, true);
+                _animator.SetBool(IS_WALKING, true);
                 break;
             case PlayerStates.Smoking:
-                animator.SetBool(IS_SMOKING, true);
-                GetComponent<SpriteRenderer>().flipX = true;
+                _animator.SetBool(IS_SMOKING, true);
+                _spriteRenderer.flipX = true;
                 break;
             case PlayerStates.Present:
-                animator.SetBool(IS_PRESENT, true);
-                GetComponentInParent<Rigidbody2D>().transform.position = new Vector3(40.5f, 2.5f, 0);
-                GetComponent<SpriteRenderer>().flipX = true;
+                _animator.SetBool(IS_PRESENT, true);
+                _rb.transform.position = PRESENT_POSITION;
+                _spriteRenderer.flipX = true;
                 break;
             case PlayerStates.Working:
-                animator.SetBool(IS_WORKING, true);
-                GetComponentInParent<Rigidbody2D>().transform.position = new Vector3(9.3f, -1.7f, 0);
-                GetComponent<SpriteRenderer>().flipX = false;
+                _animator.SetBool(IS_WORKING, true);
+                _rb.transform.position = WORKING_POSITION;
+                _spriteRenderer.flipX = false;
                 break;
             case PlayerStates.DrinkingWater:
-                animator.SetBool(IS_DRINKING, true);
-                GetComponent<SpriteRenderer>().flipX = false;
+                _animator.SetBool(IS_DRINKING, true);
+                _spriteRenderer.flipX = false;
                 break;
             case PlayerStates.DrinkingCoffee:
-                animator.SetTrigger(IS_DRINKING_COFFEE);
+                _animator.SetTrigger(IS_DRINKING_COFFEE);
                 break;
             case PlayerStates.Microwaving:
-                animator.SetTrigger(IS_MICROWAVING);
+                _animator.SetTrigger(IS_MICROWAVING);
                 break;
-            case PlayerStates.Idle:
-                animator.SetBool(IS_WALKING, false);
-                animator.SetBool(IS_SMOKING, false);
-                animator.SetBool(IS_PRESENT, false);
-                animator.SetBool(IS_WORKING, false);
-                animator.SetBool(IS_DRINKING, false);
-                animator.SetBool(IS_DRINKING_COFFEE, false);
-                animator.SetBool(IS_MICROWAVING, false);
-                break;
+        }
+    }
+
+    private void ResetAllBoolParameters()
+    {
+        _animator.SetBool(IS_WALKING, false);
+        _animator.SetBool(IS_SMOKING, false);
+        _animator.SetBool(IS_PRESENT, false);
+        _animator.SetBool(IS_WORKING, false);
+        _animator.SetBool(IS_DRINKING, false);
+        _animator.SetBool(IS_DRINKING_COFFEE, false);
+        _animator.SetBool(IS_MICROWAVING, false);
+    }
+
+    private void UpdatePlayerDirection()
+    {
+        var currentState = PlayerCurrentState.Instance.GetCurrentState();
+        if (currentState == PlayerStates.Present) return;
+
+        var mousePos = GameInput.Instance.GetMousePosition();
+        var playerPos = PlayerMovement.Instance.GetPlayerScreenPosition();
+
+        // Обновление направления взгляда
+        if (currentState == PlayerStates.Walking || currentState == PlayerStates.Idle)
+        {
+            _spriteRenderer.flipX = mousePos.x >= playerPos.x;
+        }
+
+        // Обновление вертикального направления
+        if (currentState == PlayerStates.Walking ||
+            currentState == PlayerStates.Idle ||
+            currentState == PlayerStates.Smoking ||
+            currentState == PlayerStates.Talking)
+        {
+            _animator.SetFloat("MoveY", mousePos.y < playerPos.y ? -1 : 1);
         }
     }
 
     public void ResetState() => PlayerCurrentState.Instance.SetState(PlayerStates.Idle);
-
-    private void GetAdjustPlayerDirection()
-    {
-        switch (PlayerCurrentState.Instance.GetCurrentState())
-        {
-            case PlayerStates.Idle:
-                if (GameInput.Instance.GetMousePosition().x < PlayerMovement.Instance.GetPlayerScreenPosition().x)
-                {
-                    spriteRenderer.flipX = false;
-                }
-                else
-                {
-                    spriteRenderer.flipX = true;
-                }
-                if (GameInput.Instance.GetMousePosition().y < PlayerMovement.Instance.GetPlayerScreenPosition().y)
-                {
-                    animator.SetFloat("MoveY", -1);
-                }
-                else
-                {
-                    animator.SetFloat("MoveY", 1);
-                }
-                break;
-            case PlayerStates.Smoking:
-                if (GameInput.Instance.GetMousePosition().y < PlayerMovement.Instance.GetPlayerScreenPosition().y)
-                {
-                    animator.SetFloat("MoveY", -1);
-                }
-                else
-                {
-                    animator.SetFloat("MoveY", 1);
-                }
-                break;
-            case PlayerStates.Talking:
-                if (GameInput.Instance.GetMousePosition().y < PlayerMovement.Instance.GetPlayerScreenPosition().y)
-                {
-                    animator.SetFloat("MoveY", -1);
-                }
-                else
-                {
-                    animator.SetFloat("MoveY", 1);
-                }
-                break;
-            case PlayerStates.Present:
-                break;
-            case PlayerStates.Walking:
-                if (GameInput.Instance.GetMousePosition().x < PlayerMovement.Instance.GetPlayerScreenPosition().x)
-                {
-                    spriteRenderer.flipX = false;
-                }
-                else
-                {
-                    spriteRenderer.flipX = true;
-                }
-
-                if (GameInput.Instance.GetMousePosition().y < PlayerMovement.Instance.GetPlayerScreenPosition().y)
-                {
-                    animator.SetFloat("MoveY", -1);
-                }
-                else
-                {
-                    animator.SetFloat("MoveY", 1);
-                }
-                break;
-        }
-    }
 }

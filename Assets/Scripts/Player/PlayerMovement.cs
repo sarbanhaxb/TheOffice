@@ -7,42 +7,62 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour
 {
     public static PlayerMovement Instance { get; private set; }
-
-    [SerializeField] private float moveSpeed = 10f;
-
-    private Rigidbody2D rb;
     public GameInput GameInput { get; private set; }
+
+    [Header("Настройки движения")]
+    [SerializeField] private float moveSpeed = 10f;
+    [SerializeField] private float acceleration = 15f; // Ускорение при разгоне
+    [SerializeField] private float deceleration = 20f; // Замедление при остановке
+
+    private Rigidbody2D _rb;
+    private Vector2 _currentVelocity;
+    private static readonly HashSet<PlayerStates> BlockedStates = new()
+    {
+        PlayerStates.Present,
+        PlayerStates.Working,
+        PlayerStates.Smoking,
+        PlayerStates.DrinkingWater,
+        PlayerStates.DrinkingCoffee,
+        PlayerStates.Microwaving
+    };
 
     private void Awake()
     {
         Instance = this;
         GameInput = gameObject.AddComponent<GameInput>();
-        rb = GetComponent<Rigidbody2D>();
+        _rb = GetComponent<Rigidbody2D>();
     }
 
     private void FixedUpdate()
     {
-        PlayerStates ps = PlayerCurrentState.Instance.GetCurrentState();
-        List<PlayerStates> psl = new() { PlayerStates.Present, PlayerStates.Working, PlayerStates.Smoking, PlayerStates.DrinkingWater, PlayerStates.DrinkingCoffee, PlayerStates.Microwaving };
-        if (!psl.Contains(ps))
+        if (!BlockedStates.Contains(PlayerCurrentState.Instance.GetCurrentState()))
         {
             HandleMovement();
         }
-        Debug.Log(PlayerCurrentState.Instance.GetCurrentState());
     }
 
     private void HandleMovement()
     {
-        Vector2 inputVector = GameInput.Instance.GetMovementVector().normalized;
-        rb.MovePosition(rb.position + inputVector * (moveSpeed * Time.fixedDeltaTime));
-        if (Mathf.Abs(inputVector.x) > 0 || Mathf.Abs(inputVector.y) > 0)
-        {
-            PlayerCurrentState.Instance.SetState(PlayerStates.Walking);
-        }
-        else
-        {
-            PlayerCurrentState.Instance.SetState(PlayerStates.Idle);
-        }
+        Vector2 inputVector = GameInput.Instance.GetMovementVector();
+        bool isMoving = inputVector.magnitude > 0.1f;
+
+        // Расчет целевой скорости
+        Vector2 targetVelocity = inputVector.normalized * moveSpeed;
+
+        // Плавное изменение скорости
+        _currentVelocity = Vector2.Lerp(
+            _currentVelocity,
+            targetVelocity,
+            (isMoving ? acceleration : deceleration) * Time.fixedDeltaTime
+        );
+
+        // Применение движения
+        _rb.MovePosition(_rb.position + _currentVelocity * Time.fixedDeltaTime);
+
+        // Обновление состояния
+        PlayerCurrentState.Instance.SetState(
+            isMoving ? PlayerStates.Walking : PlayerStates.Idle
+        );
     }
     public Vector3 GetPlayerScreenPosition() => Camera.main.WorldToScreenPoint(transform.position);
 }

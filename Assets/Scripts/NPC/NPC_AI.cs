@@ -5,21 +5,24 @@ using UnityEngine;
 using UnityEngine.AI;
 using TheOffice.Utils;
 
-public class PersonalAI : MonoBehaviour
+public class NPC_AI : MonoBehaviour
 {
+    [Header("Настройки движения")]
     [SerializeField] private StatesAI startingState;
     [SerializeField] private float roamingDistanceMax = 7f;
     [SerializeField] private float roamingDistanceMin = 3f;
-    //[SerializeField] private float roamingTimerMax = 2f;
+    [SerializeField] private float roamingTimerMax = 2f;
 
-    private Vector3 currentDestination;
+    [Header("Интерактивные позиции")]
+    [SerializeField] GameObject workPlace;
+    [SerializeField] List<GameObject> coolerPlace;
+    [SerializeField] GameObject smokeArea;
 
     private NavMeshAgent navMeshAgent;
     private StatesAI currentState;
-    //private float roamingTimer;
+    private float roamingTimer;
     private Vector3 roamingPosition;
     private Vector3 startingPosition;
-    List<Vector3> vector3s = new List<Vector3>();
 
     private void Awake()
     {
@@ -29,47 +32,34 @@ public class PersonalAI : MonoBehaviour
         navMeshAgent.updateUpAxis = false;
     }
 
-    private void Start()
-    {
-        startingPosition = transform.position;
-
-        vector3s.Add(new Vector3(-19.166193f, -11.966877f, 0f));
-        vector3s.Add(new Vector3(-8.53369522f, 4.82197189f, 0));
-        vector3s.Add(new Vector3(43f, 4f, 0));
-
-        currentDestination = vector3s[UnityEngine.Random.Range(0, vector3s.Count)];
-        navMeshAgent.SetDestination(currentDestination);
-
-    }
-
     private void Update()
     {
         switch (currentState)
         {
+            default:
             case StatesAI.Idle:
                 break;
             case StatesAI.Walking:
-                Roaming();
+                roamingTimer -= Time.deltaTime;
+                if(roamingTimer < 0)
+                {
+                    Roaming();
+                    roamingTimer = roamingTimerMax;
+                }
                 break;
         }
+        Debug.Log(smokeArea.transform.position);
     }
 
     private void Roaming()
     {
-        //roamingPosition = GetRoamingPosition();
-        if (transform.position == currentDestination)
-        {
-            currentDestination = vector3s[UnityEngine.Random.Range(0, vector3s.Count)];
-            navMeshAgent.SetDestination(currentDestination);
-        }
+        startingPosition = transform.position;
+        roamingPosition = GetRoamingPosition();
+        navMeshAgent.SetDestination(roamingPosition);
     }
 
     private Vector3 GetRoamingPosition()
     {
         return startingPosition + Utils.GetRandomDir() * UnityEngine.Random.Range(roamingDistanceMin, roamingDistanceMax);
     }
-
-    public StatesAI GetCurrentState() => currentState;
-    public void SetCurrentState(StatesAI state) => currentState = state;
-
 }

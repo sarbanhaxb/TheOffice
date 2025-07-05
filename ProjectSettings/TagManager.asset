@@ -12,6 +12,8 @@ TagManager:
   - Toilet
   - Border
   - Personal
+  - NPC
+  - StatsBar
   layers:
   - Default
   - TransparentFX

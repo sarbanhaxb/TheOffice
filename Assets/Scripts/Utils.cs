@@ -8,7 +8,6 @@ namespace TheOffice.Utils
     {
         public static Vector3 GetRandomDir() => new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f)).normalized;
 
-
     }
     public enum StatesAI
     {
@@ -28,4 +27,12 @@ namespace TheOffice.Utils
         DrinkingCoffee,
         Microwaving
     }
+
+
+}
+public interface IInteractable
+{
+    void Interact();
+    void ShowHint();
+    void HideHint();
 }
