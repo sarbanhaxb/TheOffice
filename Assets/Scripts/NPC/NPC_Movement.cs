@@ -24,10 +24,9 @@ public class NPC_Movement : MonoBehaviour
     [SerializeField] private GameObject target;
 
     private NavMeshAgent navMeshAgent;
-    private NPCStates currentState;
     private float originalStoppingDistance;
     private NPC_Stats stats;
-    private NPC_CurrentStates currentStates;
+    private NPC_CurrentStates currentState;
     private bool isAtDestination = false;
     private GameObject currentDestination;
 
@@ -35,8 +34,8 @@ public class NPC_Movement : MonoBehaviour
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
         stats = GetComponent<NPC_Stats>();
-        currentStates = GetComponent<NPC_CurrentStates>();
-        currentState = startingState;
+        currentState = GetComponent<NPC_CurrentStates>();
+        currentState.SetState(startingState);
         navMeshAgent.updateRotation = false;
         navMeshAgent.updateUpAxis = false;
         originalStoppingDistance = navMeshAgent.stoppingDistance;
@@ -96,7 +95,7 @@ public class NPC_Movement : MonoBehaviour
         // Выполняем действия в зависимости от типа цели
         if (target == workPlace)
         {
-            currentStates.SetState(NPCStates.Working);
+            currentState.SetState(NPCStates.Working);
         }
         else if (coolerPlace.Contains(target))
         {
@@ -109,7 +108,7 @@ public class NPC_Movement : MonoBehaviour
         else if (target == smokeArea)
         {
             // Курим - уменьшаем стресс
-            currentStates.SetState(NPCStates.Smoking);
+            currentState.SetState(NPCStates.Smoking);
         }
     }
 
@@ -129,6 +128,7 @@ public class NPC_Movement : MonoBehaviour
         }
         else if (stats.GetCurrentStressLevel() > 75f)
         {
+            currentState.SetState(NPCStates.Walking);
             target = smokeArea;
         }
         return target;

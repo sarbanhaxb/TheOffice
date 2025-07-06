@@ -65,8 +65,34 @@ AnimationClip:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 0, y: 0, z: 0}
   m_ClipBindingConstant:
-    genericBindings: []
-    pptrCurveMapping: []
+    genericBindings:
+    - serializedVersion: 2
+      path: 0
+      attribute: 0
+      script: {fileID: 0}
+      typeID: 212
+      customType: 23
+      isPPtrCurve: 1
+      isIntCurve: 0
+      isSerializeReferenceCurve: 0
+    pptrCurveMapping:
+    - {fileID: 3583196607226835800, guid: d77450fc452adbc4c850e4fba71d203d, type: 3}
+    - {fileID: -6417301065981273034, guid: d77450fc452adbc4c850e4fba71d203d, type: 3}
+    - {fileID: 8610896574626652659, guid: d77450fc452adbc4c850e4fba71d203d, type: 3}
+    - {fileID: -7840587340868654348, guid: d77450fc452adbc4c850e4fba71d203d, type: 3}
+    - {fileID: 6732206312422614446, guid: d77450fc452adbc4c850e4fba71d203d, type: 3}
+    - {fileID: -493930463638609631, guid: d77450fc452adbc4c850e4fba71d203d, type: 3}
+    - {fileID: -4813102857732410016, guid: d77450fc452adbc4c850e4fba71d203d, type: 3}
+    - {fileID: -6331355097527310428, guid: d77450fc452adbc4c850e4fba71d203d, type: 3}
+    - {fileID: 8421908333855208577, guid: d77450fc452adbc4c850e4fba71d203d, type: 3}
+    - {fileID: 794268524916946082, guid: d77450fc452adbc4c850e4fba71d203d, type: 3}
+    - {fileID: -3525298040071370786, guid: d77450fc452adbc4c850e4fba71d203d, type: 3}
+    - {fileID: -2647592565228158891, guid: d77450fc452adbc4c850e4fba71d203d, type: 3}
+    - {fileID: -5626235580653192228, guid: d77450fc452adbc4c850e4fba71d203d, type: 3}
+    - {fileID: -2773581006307801190, guid: d77450fc452adbc4c850e4fba71d203d, type: 3}
+    - {fileID: 2156314439072519036, guid: d77450fc452adbc4c850e4fba71d203d, type: 3}
+    - {fileID: 854512098926290919, guid: d77450fc452adbc4c850e4fba71d203d, type: 3}
+    - {fileID: 854512098926290919, guid: d77450fc452adbc4c850e4fba71d203d, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
@@ -91,4 +117,11 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events: []
+  m_Events:
+  - time: 4.8
+    functionName: SetRandom
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 5
+    messageOptions: 0

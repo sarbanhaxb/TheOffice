@@ -6,11 +6,14 @@ public class PlayerStats : MonoBehaviour
 {
     [Header("Состояние персонажа")]
     [SerializeField] internal float maxStressLevel = 100f;
-    [SerializeField] internal float stressIncreaseRate = 0.2f; // Базовая скорость роста стресса
+    [SerializeField] internal float stressIncreaseRate; // Базовая скорость роста стресса
+    [SerializeField] private float defaultStressIncreaseRate = 0.2f;
     [SerializeField] internal float maxStarveLevel = 100f;
-    [SerializeField] internal float hungerIncreaseRate = 0.3f;
+    [SerializeField] internal float hungerIncreaseRate;
+    [SerializeField] private float defaultHungerIncreaseRate = 0.3f;
     [SerializeField] internal float maxThirstLevel = 100f;
-    [SerializeField] internal float thirstIncreaseRate = 0.4f;
+    [SerializeField] internal float thirstIncreaseRate;
+    [SerializeField] private float defaultThirstIncreaseRate = 0.4f;
 
     [Header("Настройки скорости")]
     [SerializeField] private float baseMoveSpeed = 10f;
@@ -44,6 +47,10 @@ public class PlayerStats : MonoBehaviour
         _currentThirstLevel = 0f;
         _currentMoveSpeed = baseMoveSpeed;
         currentMoney = 0;
+
+        stressIncreaseRate = defaultStressIncreaseRate;
+        hungerIncreaseRate = defaultHungerIncreaseRate;
+        thirstIncreaseRate = defaultThirstIncreaseRate;
     }
 
     private void Update()
@@ -138,9 +145,9 @@ public class PlayerStats : MonoBehaviour
                 hungerIncreaseRate = -10f;
                 break;
             default:
-                stressIncreaseRate = 0.3f; // Возвращает значения к изначальным
-                thirstIncreaseRate = 0.4f;
-                hungerIncreaseRate = 0.3f;
+                stressIncreaseRate = defaultStressIncreaseRate; // Возвращает значения к изначальным
+                thirstIncreaseRate = defaultThirstIncreaseRate;
+                hungerIncreaseRate = defaultHungerIncreaseRate;
                 break;
         }
     }

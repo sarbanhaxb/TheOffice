@@ -5,11 +5,14 @@ public class NPC_Stats : MonoBehaviour
 {
     [Header("Состояние рабочего")]
     [SerializeField] private float maxStressLevel = 100f;
-    [SerializeField] private float stressIncreaseRate = 0.2f;
+    [SerializeField] private float stressIncreaseRate;
+    [SerializeField] private float defaultStressIncreaseRate = 0.2f;
     [SerializeField] private float maxStarveLevel = 100f;
-    [SerializeField] private float hungerIncreaseRate = 0.3f;
+    [SerializeField] private float hungerIncreaseRate;
+    [SerializeField] private float defaultHungerIncreaseRate = 0.3f;
     [SerializeField] private float maxThirstLevel = 100f;
-    [SerializeField] private float thirstIncreaseRate = 0.4f;
+    [SerializeField] private float thirstIncreaseRate;
+    [SerializeField] private float defaultThirstIncreaseRate = 0.4f;
 
     [Header("Характеристики рабочего")]
     [SerializeField] private float workingSpeed = 1f;
@@ -18,11 +21,15 @@ public class NPC_Stats : MonoBehaviour
     private float _currentStarveLevel;
     private float _currentThirstLevel;
 
+    private NPC_CurrentStates _currentState;
+
     private void Awake()
     {
+        ResetAllIncreaseRate();
         _currentStressLevel = 0f;
         _currentStarveLevel = 0f;
         _currentThirstLevel = 0f;
+        _currentState = GetComponent<NPC_CurrentStates>();
     }
 
     private void Update()
@@ -30,6 +37,7 @@ public class NPC_Stats : MonoBehaviour
         UpdateStressLevel();
         UpdateHungerLevel();
         UpdateThirstLevel();
+        CheckCurrentState();
     }
 
     private void UpdateStressLevel()
@@ -58,6 +66,33 @@ public class NPC_Stats : MonoBehaviour
         );
     }
 
+    private void CheckCurrentState()
+    {
+        switch (_currentState.GetCurrentState())
+        {
+            case NPCStates.Working:
+                stressIncreaseRate = 2f;
+                break;
+            case NPCStates.Smoking:
+                stressIncreaseRate = -5f;
+                break;
+            case NPCStates.DrinkWater:
+                break;
+            case NPCStates.DrinkCoffee:
+                break;
+            default:
+                ResetAllIncreaseRate();
+                break;
+        }
+    }
+
+
+    private void ResetAllIncreaseRate()
+    {
+        stressIncreaseRate = defaultStressIncreaseRate;
+        hungerIncreaseRate = defaultHungerIncreaseRate;
+        thirstIncreaseRate = defaultThirstIncreaseRate;
+    }
 
     public float GetMaxStressLevel() => maxStressLevel;
     public float GetCurrentStressLevel() => _currentStressLevel;

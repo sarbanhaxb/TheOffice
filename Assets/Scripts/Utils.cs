@@ -13,7 +13,9 @@ namespace TheOffice.Utils
         Idle,
         Walking,
         Smoking,
-        Working
+        Working,
+        DrinkWater,
+        DrinkCoffee
     }
 
     public enum PlayerStates

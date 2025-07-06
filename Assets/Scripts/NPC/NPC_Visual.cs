@@ -11,6 +11,8 @@ public class NPC_Visual : MonoBehaviour
     private NavMeshAgent _navMeshAgent;
     private NPC_Stats _stats;
     private NPC_CurrentStates _currentState;
+
+    private Color _originalColor;
     
 
     [Header("Ўкалы")]
@@ -21,6 +23,7 @@ public class NPC_Visual : MonoBehaviour
     // ѕараметры аниматора
     private const string IS_WALKING = "IsMoving";
     private const string IS_WORKING = "IsWorking";
+    private const string IS_SMOKING = "IsSmoking";
     private const string MOVE_X = "MoveX";
     private const string MOVE_Y = "MoveY";
 
@@ -36,6 +39,8 @@ public class NPC_Visual : MonoBehaviour
         _animator = GetComponent<Animator>();
         _spriteRenderer = GetComponent<SpriteRenderer>();
         _navMeshAgent = GetComponentInParent<NavMeshAgent>();
+
+        _originalColor = _spriteRenderer.color;
     }
 
     private void Update()
@@ -72,11 +77,22 @@ public class NPC_Visual : MonoBehaviour
         }
     }
 
+    public void HighLightObjectOn()
+    {
+        _spriteRenderer.color = Color.green;
+    }
+
+    public void HighLightObjectOff()
+    {
+        _spriteRenderer.color = _originalColor;
+    }
+
     private void UpdatePlayerState()
     {
         var currentState = _currentState.GetCurrentState();
+        ResetAllBoolParameters();
 
-        switch(currentState)
+        switch (currentState)
         {
             case NPCStates.Working:
                 _animator.SetBool(IS_WORKING, true);
@@ -88,8 +104,20 @@ public class NPC_Visual : MonoBehaviour
                     animator.SetFloat("CURRENTPOINT", _animator.GetFloat("Random"));
                 }
                 break;
+            case NPCStates.Walking:
+                _animator.SetBool(IS_WALKING, true);
+                break;
+            case NPCStates.Smoking:
+                _animator.SetBool(IS_SMOKING, true);
+                break;
         }
+    }
 
+    private void ResetAllBoolParameters()
+    {
+        _animator.SetBool(IS_WALKING, false);
+        _animator.SetBool(IS_SMOKING, false);
+        _animator.SetBool(IS_WORKING, false);
     }
 
 
