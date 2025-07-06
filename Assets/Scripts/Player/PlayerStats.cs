@@ -56,9 +56,9 @@ public class PlayerStats : MonoBehaviour
         UpdateFinancialStatus();
         UpdateCoffeeEffect();
 
-        Debug.Log($"Current stress: {_currentStressLevel}");
-        Debug.Log($"Current thirst: {_currentThirstLevel}");
-        Debug.Log($"Current starve: {_currentStarveLevel}");
+        //Debug.Log($"Current stress: {_currentStressLevel}");
+        //Debug.Log($"Current thirst: {_currentThirstLevel}");
+        //Debug.Log($"Current starve: {_currentStarveLevel}");
     }
 
     private void UpdateCoffeeEffect()
@@ -85,13 +85,8 @@ public class PlayerStats : MonoBehaviour
     {
         if (PlayerCurrentState.Instance.GetCurrentState() == PlayerStates.Working)
         {
-            // Инвертируем зависимость: чем МЕНЬШЕ стресс - тем БОЛЬШЕ доход
             float stressFactor = 1 - (_currentStressLevel / maxStressLevel);
             float moneyEarned = baseMoneyPerSecond * stressFactor * Time.deltaTime;
-
-            // Альтернативный вариант с кривой для тонкой настройки:
-            // float moneyEarned = baseMoneyPerSecond * moneyCurve.Evaluate(stressFactor) * Time.deltaTime;
-
             currentMoney += moneyEarned;
         }
     }

@@ -8,10 +8,12 @@ namespace TheOffice.Utils
     {
         public static Vector3 GetRandomDir() => new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f)).normalized;
     }
-    public enum StatesNPC
+    public enum NPCStates
     {
         Idle,
-        Walking
+        Walking,
+        Smoking,
+        Working
     }
 
     public enum PlayerStates

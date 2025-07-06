@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 1029912810017606249}
   - component: {fileID: 963483363779026972}
   - component: {fileID: 6256593091196090502}
+  - component: {fileID: 3512509866717131992}
   m_Layer: 3
   m_Name: Mark
   m_TagString: NPC
@@ -49,8 +50,8 @@ Rigidbody2D:
   m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
+  m_UseAutoMass: 1
+  m_Mass: 3.4993806
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -61,9 +62,9 @@ Rigidbody2D:
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!70 &7217428715654217270
 CapsuleCollider2D:
@@ -97,7 +98,7 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.02, y: -1.41}
+  m_Offset: {x: 0.19, y: 2.49}
   m_Size: {x: 2.8, y: 1.4}
   m_Direction: 1
 --- !u!195 &1029912810017606249
@@ -135,14 +136,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingState: 1
-  roamingDistanceMax: 7
-  roamingDistanceMin: 3
-  roamingTimerMax: 7
+  stoppingDistanceFromPlayer: 5
+  destinationReachedThreshold: 0.1
   workPlace: {fileID: 0}
   coolerPlace:
   - {fileID: 0}
   - {fileID: 0}
   smokeArea: {fileID: 0}
+  microwaveArea: {fileID: 0}
+  target: {fileID: 0}
 --- !u!114 &6256593091196090502
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,12 +158,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxStressLevel: 100
-  stressDecreaseRate: 0.5
+  stressIncreaseRate: 0.2
   maxStarveLevel: 100
   hungerIncreaseRate: 0.3
   maxThirstLevel: 100
   thirstIncreaseRate: 0.4
   workingSpeed: 0
+--- !u!114 &3512509866717131992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 617471621817593368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21af79078de2e90419f5bf4b6602aba5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentState: 1
 --- !u!1 &1319343551986956748
 GameObject:
   m_ObjectHideFlags: 0
@@ -180,7 +195,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5451848834882762925
 RectTransform:
   m_ObjectHideFlags: 0
@@ -341,12 +356,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 3119111698139073720, guid: c9ba611bfcf86ed4b9a3b0ee059de05a, type: 3}
+  m_Sprite: {fileID: -2863830726090121947, guid: 8d37ae9fcefd5ee4cbc1a5f6834d8cca, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 2.84375, y: 7.625}
+  m_Size: {x: 0.91, y: 2.44}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -388,6 +403,7 @@ MonoBehaviour:
   stressBar: {fileID: 4116552808904367515}
   starveBar: {fileID: 2791583391753126153}
   thirstBar: {fileID: 2689904650088245953}
+  table: {fileID: 0}
 --- !u!1001 &4300074390564460828
 PrefabInstance:
   m_ObjectHideFlags: 0

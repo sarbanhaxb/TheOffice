@@ -1,14 +1,17 @@
 using System.Collections.Generic;
+using TheOffice.Utils;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
 
 public class NPC_Visual : MonoBehaviour
 {
-    private Animator animator;
-    private SpriteRenderer spriteRenderer;
-    private NavMeshAgent navMeshAgent;
-    private NPC_Stats stats;
+    private Animator _animator;
+    private SpriteRenderer _spriteRenderer;
+    private NavMeshAgent _navMeshAgent;
+    private NPC_Stats _stats;
+    private NPC_CurrentStates _currentState;
+    
 
     [Header("Шкалы")]
     [SerializeField] private Image stressBar;
@@ -17,31 +20,38 @@ public class NPC_Visual : MonoBehaviour
 
     // Параметры аниматора
     private const string IS_WALKING = "IsMoving";
+    private const string IS_WORKING = "IsWorking";
     private const string MOVE_X = "MoveX";
     private const string MOVE_Y = "MoveY";
+
+    [Header("Рабочее место")]
+    [SerializeField] private GameObject table;
 
     private Vector2 lastMovementDirection;
 
     private void Awake()
     {
-        stats = GetComponentInParent<NPC_Stats>();
-        animator = GetComponent<Animator>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
-        navMeshAgent = GetComponentInParent<NavMeshAgent>();
+        _currentState = GetComponentInParent<NPC_CurrentStates>();
+        _stats = GetComponentInParent<NPC_Stats>();
+        _animator = GetComponent<Animator>();
+        _spriteRenderer = GetComponent<SpriteRenderer>();
+        _navMeshAgent = GetComponentInParent<NavMeshAgent>();
     }
 
     private void Update()
     {
+        UpdatePlayerState();
+
         stressBar.transform.localScale = Vector3.one;
 
-        stressBar.fillAmount = stats.GetCurrentStressLevel() / stats.GetMaxStressLevel();
-        starveBar.fillAmount = stats.GetCurrentStarveLevel() / stats.GetMaxStarveLevel();
-        thirstBar.fillAmount = stats.GetCurrentThirstLevel() / stats.GetMaxThirstLevel();
+        stressBar.fillAmount = _stats.GetCurrentStressLevel() / _stats.GetMaxStressLevel();
+        starveBar.fillAmount = _stats.GetCurrentStarveLevel() / _stats.GetMaxStarveLevel();
+        thirstBar.fillAmount = _stats.GetCurrentThirstLevel() / _stats.GetMaxThirstLevel();
 
-        Vector3 moveDirection = navMeshAgent.velocity;
+        Vector3 moveDirection = _navMeshAgent.velocity;
         bool isMoving = moveDirection.magnitude > 0.1f;
 
-        animator.SetBool(IS_WALKING, isMoving);
+        _animator.SetBool(IS_WALKING, isMoving);
 
         if (isMoving)
         {
@@ -49,11 +59,11 @@ public class NPC_Visual : MonoBehaviour
             lastMovementDirection = moveDirection.normalized;
 
             // Обновляем параметры анимации
-            animator.SetFloat(MOVE_X, Mathf.Abs(lastMovementDirection.x));
-            animator.SetFloat(MOVE_Y, lastMovementDirection.y);
+            _animator.SetFloat(MOVE_X, Mathf.Abs(lastMovementDirection.x));
+            _animator.SetFloat(MOVE_Y, lastMovementDirection.y);
 
             // Разворот спрайта по горизонтали
-            spriteRenderer.flipX = lastMovementDirection.x > 0.01f;
+            _spriteRenderer.flipX = lastMovementDirection.x > 0.01f;
         }
         else
         {
@@ -61,4 +71,29 @@ public class NPC_Visual : MonoBehaviour
             // (параметры MOVE_X/MOVE_Y уже установлены)
         }
     }
+
+    private void UpdatePlayerState()
+    {
+        var currentState = _currentState.GetCurrentState();
+
+        switch(currentState)
+        {
+            case NPCStates.Working:
+                _animator.SetBool(IS_WORKING, true);
+                _spriteRenderer.flipX = false;
+                var animator = table.GetComponent<Animator>();
+                if (animator != null)
+                {
+                    animator.SetBool(IS_WORKING, true); 
+                    animator.SetFloat("CURRENTPOINT", _animator.GetFloat("Random"));
+                }
+                break;
+        }
+
+    }
+
+
+    public void SetRandom(int count) => _animator.SetFloat("Random", UnityEngine.Random.Range(0, count));
+    public void ResetState() => PlayerCurrentState.Instance.SetState(PlayerStates.Idle);
+
 }
